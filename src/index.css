@@ -17,3 +17,58 @@ code {
   width: 50%;
   text-align: center;
 }
+
+.nasa-style{
+  font-style: italic;
+  color: blue;
+}
+.button-image-day{
+  background-color: #27fb6b;
+}
+.button-close-day{
+  background-color: #00a5cf;
+}
+button {
+	cursor: pointer;
+  border-radius: 0.4rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+	background: white;
+	border: 2px solid black;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+	transition: 500ms;
+  box-shadow: 3px 8px;
+  width: auto;
+  height: 3rem;
+  margin-bottom: 4%;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+}
+
+.title-date{
+  font-size: 1.4em;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.image-day{
+  margin-top:2%;
+  width: 70%;
+  height: auto;
+  justify-content: center;
+
+}
+.date-input{
+  margin: 10px 10px;
+}
+
+.title-function{
+  font-size: 1.3em;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
