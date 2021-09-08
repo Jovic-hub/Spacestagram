@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import HttpClient from "./HttpClient"
+import './index.css';
 
-function App() {
+const App = () => {
+  const [apod, setApod] = useState({})
+
+  const ImageofDay=()=>{
+    HttpClient.getApod().then(apodData => {
+      setApod(apodData.data)
+    })
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+      <h1>NASA API</h1>
+      <form onSubmit={handleSubmit}>
+        <button className="button-image-day" onClick={ImageofDay} placeholder="Button">Click here to see the Astronomy Picture of the Day</button>
+      </form>
+      <div>
+        {apod && (
+          <article>
+            <header>
+              {apod.title} <i>{apod.date}</i>
+            </header>
+            <img src={apod.url} />
+            <p>{apod.explanation}</p>
+          </article>
+        )}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
