@@ -6,7 +6,7 @@ const App = () => {
   const [images, setImages] = useState([])
 
   useEffect(()=>{
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=YxrBRvxLaXoTRk8M0ehSLus5lQcXScSy2heOd1ci&start_date=2000-04-08&end_date=2000-06-08')
+    axios.get('')
     .then(res =>{
       console.log(res)
       res.data.reverse()
