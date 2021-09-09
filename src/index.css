@@ -17,11 +17,6 @@ code {
   width: 50%;
   text-align: center;
 }
-
-.nasa-style{
-  font-style: italic;
-  color: blue;
-}
 .button-image-day{
   background-color: #27fb6b;
 }
@@ -72,3 +67,119 @@ button:hover {
   font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
+.Instagram-card{
+	background: #ffffff;
+	border: 1px solid #f2f2f2;
+	border-radius: 3px;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+  margin-top: 2%;
+}
+
+
+.card-date{
+  padding-left: 10px;
+	width: 120px;
+	text-align: left;
+}
+
+.card-name{
+	margin-left: -20px;
+	font-weight:bold;
+  color: #262626;
+}
+
+.card-desc{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-content{
+  padding: 20px;
+}
+
+.card-image{
+  width: 100%;
+  height: auto;
+}
+.card-header{
+  height: 20px;
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.read-or-hide{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.heart{
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: gray;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 0 10px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.heart::before{
+  position: absolute;
+  content: "";
+  top: -55%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::after{
+  position: absolute;
+  content: "";
+  right: -55%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+#red-heart{
+  background-color: red;
+}
+.like{
+  margin: 5% 5%;
+}
+.fixed-nav-bar {
+  position: fixed;
+  align-items: flex-end;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0px 0px 10px gray;
+  display: flex;
+  line-height: 50px;
+}
+nav .brand {
+  flex: 1;
+  height: 50px;
+  font-style: italic;
+  color: blue;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+}
+.posts{
+  margin-top: 60px;
+}

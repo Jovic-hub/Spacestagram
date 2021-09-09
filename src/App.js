@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react"
 import './index.css';
 import axios from "axios";
+require('dotenv').config()
 
 const App = () => {
+  const NASA_KEY = process.env.REACT_APP_API_KEY
   const [images, setImages] = useState([])
-
+  
   useEffect(()=>{
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=YxrBRvxLaXoTRk8M0ehSLus5lQcXScSy2heOd1ci&start_date=2000-04-08&end_date=2000-06-08')
+    axios.get(NASA_KEY)
     .then(res =>{
-      console.log(res)
       res.data.reverse()
+      console.log(res)
       setImages(res.data)
     })
     .catch(err=>{
@@ -17,21 +19,71 @@ const App = () => {
     })
   })
 
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+      setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className="text">
+        {isReadMore ? text.slice(0, 150) : text}
+        <span onClick={toggleReadMore} className="read-or-hide">
+          {isReadMore ? "...read more" : " show less"}
+        </span>
+      </p>
+    );
+  };
+
+  const Heart = () => {
+    const [active, notActive] = useState(false);
+    const toggleReadMore = () => {
+      notActive(!active);
+    };
+    return (       
+      <a onClick={toggleReadMore}>
+          {active ? <div className = "heart" id="red-heart"></div> : <div className = "heart"></div>}
+      </a>
+    );
+  };
+  
+  const DateToString = ({ children }) => {
+    const date = children;
+    return(
+      <div className="card-date">
+        <a>{date}</a>
+      </div>
+    );
+  };
+
   return(
     <div className="home">
-      <h1 className="nasa-style">Spacestagram</h1>
-      <div>
+      <nav class="fixed-nav-bar">
+        <a class="brand">Spacestagram</a>
+      </nav>
+      <div className="posts">
       {images.map(item => (
+      <div className="Instagram-card">
           <div>
-            <header className="title-date">
-              {item.title}
-            </header>
-            <img src={item.url} className="image-day"/>
-            <p>{item.date}</p>
-            <p>{item.explanation}</p>
+            <div className="card-header">
+              <a className="card-name">{item.title}</a>
+            </div>
+            <img className="card-image" src={item.url}/>
+              <div className="like">
+                <Heart/>
+              </div>
+            <div className="card-desc">
+              <ReadMore>
+                {item.explanation}       
+              </ReadMore>
+            </div>
+            <DateToString>
+              {item.date}       
+            </DateToString>
           </div>
+        </div>
         ))}
-      </div>
+        </div>
     </div>
   )
 }
