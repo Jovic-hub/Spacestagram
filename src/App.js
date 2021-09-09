@@ -8,7 +8,11 @@ const App = () => {
   const [images, setImages] = useState([])
   
   useEffect(()=>{
+<<<<<<< HEAD
     axios.get(NASA_KEY)
+=======
+    axios.get('')
+>>>>>>> 5c48e42feb43a9d133b170ff0399ac087c8caf61
     .then(res =>{
       res.data.reverse()
       console.log(res)
