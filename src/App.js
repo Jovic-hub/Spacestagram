@@ -7,7 +7,6 @@ const App = () => {
   const NASA_KEY = process.env.REACT_APP_API_KEY
   const [images, setImages] = useState([])
   
-<<<<<<< HEAD
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(NASA_KEY);
@@ -17,19 +16,6 @@ const App = () => {
     };
     fetchData();
   }, []);
-=======
-  useEffect(()=>{
-    axios.get(NASA_KEY)
-    .then(res =>{
-      res.data.reverse()
-      console.log(res)
-      setImages(res.data)
-    })
-    .catch(err=>{
-      console.log(err)
-    })
-  })
->>>>>>> 16bcd9540d3cc0de82c560e3817a36690026becd
 
   const ReadMore = ({ children }) => {
     const text = children;
