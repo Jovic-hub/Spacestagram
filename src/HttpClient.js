@@ -17,7 +17,7 @@ axios.interceptors.request.use(
 )
 
 export default {
-  getApod() {
+  getImages() {
     return axios.get(`${nasaEndpoint}planetary/apod`)
   },
 }

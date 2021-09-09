@@ -3,11 +3,11 @@ import HttpClient from "./HttpClient"
 import './index.css';
 
 const App = () => {
-  const [apod, setApod] = useState({})
+  const [images, setImages] = useState({})
   
-  HttpClient.getApod().then(apodData => {
-    setApod(apodData.data)
-    console.log(apodData.data)
+  HttpClient.getImages().then(imagesData => {
+    setImages(imagesData.data)
+    console.log(imagesData.data)
   })
     
   function handleSubmit(event) {
@@ -18,7 +18,7 @@ const App = () => {
     <div className="home">
       <h1 className="nasa-style">Spacestagram</h1>
       <div>
-      {apod.map(() =>(
+      {images.map(() =>(
           <div>
             <header className="title-date">
               {apod.title}
