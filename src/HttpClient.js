@@ -9,7 +9,8 @@ axios.interceptors.request.use(
     const configUrl = config.url
     if (configUrl.includes(nasaEndpoint)) {
       config.params["api_key"] = nasaApiKey
-      //config.params["date"] = '2000-04-08'
+      config.params["start_date"] = '2000-04-08'
+      config.params["end_date"] = '2000-06-08'
     }
     return config
   },
