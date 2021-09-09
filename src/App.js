@@ -7,7 +7,6 @@ const App = () => {
   const NASA_KEY = process.env.REACT_APP_API_KEY
   const [images, setImages] = useState([])
   
-<<<<<<< HEAD
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(NASA_KEY);
@@ -17,22 +16,10 @@ const App = () => {
     };
     fetchData();
   }, []);
-=======
-  useEffect(()=>{
-    axios.get(NASA_KEY)
-    .then(res =>{
-      res.data.reverse()
-      console.log(res)
-      setImages(res.data)
-    })
-    .catch(err=>{
-      console.log(err)
-    })
-  })
->>>>>>> 16bcd9540d3cc0de82c560e3817a36690026becd
 
-  const ReadMore = ({ children }) => {
-    const text = children;
+
+  const ReadMore = ({ ok }) => {
+    const text = ok;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
       setIsReadMore(!isReadMore);
@@ -59,8 +46,7 @@ const App = () => {
     );
   };
   
-  const DateToString = ({ children }) => {
-    const date = children;
+  const DateToString = ({ date }) => {
     return(
       <div className="card-date">
         <a>{date}</a>
@@ -70,30 +56,26 @@ const App = () => {
 
   return(
     <div className="home">
-      <nav class="fixed-nav-bar">
-        <a class="brand">Spacestagram</a>
+      <nav className="fixed-nav-bar">
+        <h1 className="brand">Spacestagram</h1>
       </nav>
       <div className="posts">
-      {images.map(item => (
-      <div className="Instagram-card">
-          <div>
-            <div className="card-header">
-              <a className="card-name">{item.title}</a>
-            </div>
-            <img className="card-image" src={item.url}/>
-              <div className="like">
-                <Heart/>
+      {images.map((item, index) => (
+        <div key ={index} className="Instagram-card">
+            <div>
+              <div className="card-header">
+                <a className="card-name">{item.title}</a>
               </div>
-            <div className="card-desc">
-              <ReadMore>
-                {item.explanation}       
-              </ReadMore>
+              <img className="card-image" src={item.url}/>
+                <div className="like">
+                  <Heart/>
+                </div>
+              <div className="card-desc">
+              <ReadMore ok={item.explanation}/>
+              </div>
+              <DateToString date={item.date}/>
             </div>
-            <DateToString>
-              {item.date}       
-            </DateToString>
           </div>
-        </div>
         ))}
         </div>
     </div>
