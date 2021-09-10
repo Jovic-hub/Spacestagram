@@ -54,6 +54,18 @@ const App = () => {
     );
   };
 
+  const VideoOrImage=({mediaType, url}) =>{
+    if(mediaType === "video"){
+      return (
+        <iframe className="card-image" src={url}></iframe>
+      )
+    }
+    else if(mediaType ==="image"){
+      return (
+        <img className="card-image" src={url}/>
+      )
+    }
+  }
   return(
     <div className="home">
       <nav className="fixed-nav-bar">
@@ -66,7 +78,7 @@ const App = () => {
               <div className="card-header">
                 <a className="card-name">{item.title}</a>
               </div>
-              <img className="card-image" src={item.url}/>
+              <VideoOrImage mediaType={item.media_type} url={item.url}/>
                 <div className="like">
                   <Heart/>
                 </div>
