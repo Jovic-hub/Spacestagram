@@ -14,15 +14,20 @@ code {
 
 .home{
   margin: auto;
-  width: 50%;
   text-align: center;
+  @media screen and (max-width: 768px){
+    width:50%
+  }
 }
+
 .button-image-day{
   background-color: #27fb6b;
 }
+
 .button-close-day{
   background-color: #00a5cf;
 }
+
 button {
 	cursor: pointer;
   border-radius: 0.4rem;
@@ -69,12 +74,15 @@ button:hover {
 
 .Instagram-card{
 	background: #ffffff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e6e6e6;
 	border-radius: 3px;
-	width: 100%;
+	width: 99%;
 	max-width: 600px;
 	margin: auto;
   margin-top: 2%;
+  @media screen and (max-width: 768px){
+    width:100%
+  }
 }
 
 
@@ -91,8 +99,8 @@ button:hover {
 }
 
 .card-desc{
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .card-content{
