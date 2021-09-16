@@ -2,28 +2,50 @@ import React, { useState, useEffect} from "react"
 import './index.css';
 import axios from "axios";
 import load from './images/loading.gif'
+import InfiniteScroll from "react-infinite-scroll-component";
 require('dotenv').config()
+
 
 const Posts = () => {
   const NASA_KEY = process.env.REACT_APP_API_KEY
   const [images, setImages] = useState([]) 
   const [loading, setLoading] = useState(true);
+  let [startdate, setStart] = useState(new Date().toISOString().slice(0, 10))
+  let [enddate, setEnd] = useState(new Date())
 
-  useEffect(() => {
-    const today = new Date().toISOString().slice(0, 10)
-    var end = new Date();
-    end.setDate(end.getDate()-10)
+  let manipulatePosts=()=>{
+    console.log(enddate)
     const fetchData = async () => {
       const result = await axios({
         url: NASA_KEY,
-        params: {thumbs:'True', start_date:end.toISOString().slice(0, 10), end_date:today}
+        params: {thumbs:'True', start_date:enddate.toISOString().slice(0, 10), end_date:startdate}
       });
       result.data.reverse()
-      console.log(result)
       setImages(result.data);
-      setLoading(false);
+      enddate.setDate(enddate.getDate()-10)
+      setEnd(enddate)
     };
     fetchData();
+  }
+  
+  const fetchingData=()=>{
+    enddate.setDate(enddate.getDate()-10)
+    const fetchData = async () => {
+      const result = await axios({
+        url: NASA_KEY,
+        params: {thumbs:'True', start_date:enddate.toISOString().slice(0, 10), end_date:startdate}
+      });
+      result.data.reverse()
+      setImages(result.data);
+      setLoading(false);
+      enddate.setDate(enddate.getDate()-10)
+      setEnd(enddate)
+    };
+    fetchData();
+  }
+
+  useEffect(() => {
+    fetchingData();
   }, []);
 
 
@@ -74,8 +96,7 @@ const Posts = () => {
         <img className="card-image" src={url}/>
       )
     }
-  }
-  
+  } 
   return(
     <div className="home">
       {loading ? <div className="center-loading"><p class ="Load-text">Loading</p><img src={load}/></div>:<div>
@@ -83,6 +104,12 @@ const Posts = () => {
           <h1 className="brand">Spacestagram</h1>
         </nav>
         <div className="posts">
+        <InfiniteScroll
+          dataLength={images.length}
+          next={manipulatePosts}
+          hasMore={true}
+          loader={<img src={load}/>}
+        >
         {images.map((item, index) => (
           <div key ={index} className="Instagram-card">
               <div>
@@ -100,6 +127,7 @@ const Posts = () => {
               </div>
             </div>
           ))}
+          </InfiniteScroll>
           </div>
         </div>}
     </div>
