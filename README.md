@@ -17,7 +17,7 @@ The NASA_KEY is coming from a .env file, and the params are:
 thumbs: If the content type is a video from youtube, we can get just the Thumbnail url.
 start_date: Today date -10 days converted to YYYY-MM-DD
 end_date: Today date converted to YYYY-MM-DD.
-After getting the data from a specific range, we need to revert the order of the result, for the user see the most recent posts first.
+After getting the data from a specific range, we need to revert the order of the result, for the user see the most recent posts first.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133918157-6d0dce65-9cc8-4411-ac99-1d02213ef954.png)
 
 ### Responsive Design
