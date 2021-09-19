@@ -21,9 +21,9 @@ After getting the data from a specific range, we need to revert the order of the
 ![image](https://user-images.githubusercontent.com/53789339/133918157-6d0dce65-9cc8-4411-ac99-1d02213ef954.png)
 <br><br>
 After this, we should be able do the API pagination, to get a limited amount of data from the API, this is important for some reasons:<br>
-* Don't over request data from the API<br>
-* Don't force the user wait too much for all the requests<br>
-* Infinite scroll possibility.
+  * Don't over request data from the API<br>
+  * Don't force the user wait too much for all the requests<br>
+  * Infinite scroll possibility.
 <br><br>
 For the <b>Infinite scroll</b>, I am using a open-source library for ReactJS called InfiniteScroll.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133918332-ec925cc1-5a73-4789-a9e2-d74ea0a21c5e.png)
