@@ -25,7 +25,7 @@ After this, we should be able do the API pagination, to get a limited amount of 
 * Don't force the user wait too much for all the requests<br>
 * Infinite scroll possibility.
 <br><br>
-For the <h2>Infinite scroll</h2>, I am using a open-source library for ReactJS called InfiniteScroll.<br>
+For the <b>Infinite scroll</b>, I am using a open-source library for ReactJS called InfiniteScroll.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133918332-ec925cc1-5a73-4789-a9e2-d74ea0a21c5e.png)
 <br>Data.lenght will be updated everytime that we do a new request, ManipulatePosts is doing more requests based onde the last start_date request.<br><br>
 
