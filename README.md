@@ -36,6 +36,13 @@ The spacestagram is completely responsive, designed first in the mobile version,
 <br><br>
 
 ### Logic and Details
+I will explain how I had the solution for some functions:<br>
+####Like button<br>
+The like button is developed using a Heart of just css and that is saved in the local storage when the user clicks in a Heart(Like), and every time that the application is used the code will check and list all the liked posts by their date that is unique in this API.<br>
+![image](https://user-images.githubusercontent.com/53789339/133974694-561b11cd-a3d4-4db9-bb0d-151a0b385565.png)
+![image](https://user-images.githubusercontent.com/53789339/133974733-76942856-118a-4341-aace-ecbb86d12338.png)
+
+
 ### Testing with Jest
 
 ## Conclusion and Learning Outcomes
