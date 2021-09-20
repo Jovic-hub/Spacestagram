@@ -54,3 +54,5 @@ The loading in the "timeline" is completely done using the InfiniteScroll librar
 ## Testing with Jest
 
 # Conclusion and Learning Outcomes
+I had a lot of learning outcomes in this project, I developed more my skills with ReactJS, I increased my knowledge on how to handle API and how to fetch and API and use this data to render something on the screen, increased my knowledge of modular programming and had the opportunity to do Unit Tests mainly in the API to make sure that everything is working properly and have a more consized code.<br>
+In general, this project was great for me, I learned things, I developed more skills and was really fun to do it.
