@@ -1,5 +1,5 @@
 # Spacestagram
-<h2>Heroku Link:https://spacestagram-joao.herokuapp.com/</h2><br>
+<h2>Heroku Link: https://spacestagram-joao.herokuapp.com/</h2><br>
 All the topics in this README:
 * Development
   * Fetch data from NASA’s API
