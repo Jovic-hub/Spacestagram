@@ -29,9 +29,12 @@ For the <b>Infinite scroll</b>, I am using a open-source library for ReactJS cal
 ![image](https://user-images.githubusercontent.com/53789339/133918332-ec925cc1-5a73-4789-a9e2-d74ea0a21c5e.png)
 <br>Data.lenght will be updated everytime that we do a new request, ManipulatePosts is doing more requests based onde the last start_date request.<br><br>
 
-
-
 ### Responsive Design
+The spacestagram is completely responsive, designed first in the mobile version, than transferred to the desktop size screen.<br>
+![image](https://user-images.githubusercontent.com/53789339/133974325-3435dfa1-2d04-47b5-8dd8-79976f68997b.png)
+![image](https://user-images.githubusercontent.com/53789339/133974347-d4864458-e98e-46cd-9bf2-ced86fc78f41.png)
+<br><br>
+
 ### Logic and Details
 ### Testing with Jest
 
