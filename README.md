@@ -8,9 +8,9 @@ All the topics in this README:
   * Testing with Jest
 * Conclusion and Learning Outcomes
 
-## Development
+# Development
 
-### Fetch data from NASA’s APIs
+## Fetch data from NASA’s APIs
 To fetch data from Nasa's API, I am using Axios that is a promise-based HTTP client that facilitates to use API, basically works doing HTTP requests to fetch data, so we can display all in the information on the screen.
 ![image](https://user-images.githubusercontent.com/53789339/133918007-74d99b1b-6aa8-4e57-b163-ee5fa56b67eb.png)
 <br><br>The NASA_KEY is coming from a .env file, and the params are:<br>
@@ -29,20 +29,20 @@ For the <b>Infinite scroll</b>, I am using a open-source library for ReactJS cal
 ![image](https://user-images.githubusercontent.com/53789339/133918332-ec925cc1-5a73-4789-a9e2-d74ea0a21c5e.png)
 <br>Data.lenght will be updated everytime that we do a new request, ManipulatePosts is doing more requests based onde the last start_date request.<br><br>
 
-### Responsive Design
+## Responsive Design
 The spacestagram is completely responsive, designed first in the mobile version, than transferred to the desktop size screen.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133974325-3435dfa1-2d04-47b5-8dd8-79976f68997b.png)
 ![image](https://user-images.githubusercontent.com/53789339/133974407-94b5e2a1-0675-4103-95dd-a45f9258099c.png)
 <br><br>
 
-### Logic and Details
+## Logic and Details
 I will explain how I had the solution for some functions:<br>
-####Like button<br>
+###Like button<br>
 The like button is developed using a Heart of just css and that is saved in the local storage when the user clicks in a Heart(Like), and every time that the application is used the code will check and list all the liked posts by their date that is unique in this API.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133974694-561b11cd-a3d4-4db9-bb0d-151a0b385565.png)
 ![image](https://user-images.githubusercontent.com/53789339/133974733-76942856-118a-4341-aace-ecbb86d12338.png)
 
 
-### Testing with Jest
+## Testing with Jest
 
-## Conclusion and Learning Outcomes
+# Conclusion and Learning Outcomes
