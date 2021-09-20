@@ -162,9 +162,11 @@ button:hover {
 #red-heart{
   background-color: red;
 }
+
 .like{
   margin: 5% 5%;
 }
+
 .fixed-nav-bar {
   position: fixed;
   align-items: flex-end;

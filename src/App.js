@@ -1,10 +1,5 @@
 import React, { useState, useEffect} from "react"
-import './index.css';
-import Posts from './Posts'
-
-// USE THIS AFTER
-import { Code } from 'react-content-loader'
-const MyCodeLoader = () => <Code />
+import Posts from './Components/Posts/Posts'
 
 const App = () => {
   return(
