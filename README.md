@@ -32,7 +32,7 @@ For the <b>Infinite scroll</b>, I am using a open-source library for ReactJS cal
 ### Responsive Design
 The spacestagram is completely responsive, designed first in the mobile version, than transferred to the desktop size screen.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133974325-3435dfa1-2d04-47b5-8dd8-79976f68997b.png)
-![image](https://user-images.githubusercontent.com/53789339/133974347-d4864458-e98e-46cd-9bf2-ced86fc78f41.png)
+![image](https://user-images.githubusercontent.com/53789339/133974407-94b5e2a1-0675-4103-95dd-a45f9258099c.png)
 <br><br>
 
 ### Logic and Details
