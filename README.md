@@ -43,6 +43,13 @@ The like button is developed using a Heart of just css and that is saved in the 
 ![image](https://user-images.githubusercontent.com/53789339/133974733-76942856-118a-4341-aace-ecbb86d12338.png)
 <br><br>
 ### Loading
+Loading is created by using the useState functionalitty of React, where we can change the state from true to false. So after the user is completely fetched we can change the state of loading to false and then the screen will change.
+![image](https://user-images.githubusercontent.com/53789339/133975096-215d17e5-0775-4827-8a05-984ec2a1994a.png)
+![image](https://user-images.githubusercontent.com/53789339/133975119-2fcb4eae-7ce0-4690-8492-a1b5cee6dc2b.png)
+![image](https://user-images.githubusercontent.com/53789339/133975133-be788268-142c-4800-98f1-b9468d846c28.png)
+The loading in the "timeline" is completely done using the InfiniteScroll library.
+![image](https://user-images.githubusercontent.com/53789339/133975188-5aa64544-3a68-418a-894f-f4c1b3e6f3df.png)
+
 
 
 ## Testing with Jest
