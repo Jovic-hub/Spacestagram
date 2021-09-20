@@ -52,7 +52,7 @@ The loading in the "timeline" is completely done using the InfiniteScroll librar
 <br><br>
 
 ## Testing with Jest
-To make sure that everything is working properly in my application, I am doing Unit Tests using the javascript framework Jest, that make me able to test my functions and mainly the API requests and responses, and to make sure that my code is working fine.<br>
+To make sure that everything is working properly in my application, I am doing Unit Tests using the javascript framework Jest, that make me able to test my functions and mainly the API requests and responses, and to make sure that my code is working fine.<br><br>
 <b>Here is an example:</b> The nasa API has a object called "status" that checks if the user is not using a wrong parameter or key, if the status is equal 200 everything is working fine, if 403 the request has a problem.<br>
 ![image](https://user-images.githubusercontent.com/53789339/133975986-1e17e2a4-830b-4d02-a93b-87ba03f31480.png)<br>
 ![image](https://user-images.githubusercontent.com/53789339/133976006-19caee6b-4fcb-4f7d-b54f-3c13b0bb2652.png)
