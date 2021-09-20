@@ -52,6 +52,13 @@ The loading in the "timeline" is completely done using the InfiniteScroll librar
 <br><br>
 
 ## Testing with Jest
+To make sure that everything is working properly in my application, I am doing Unit Tests using the javascript framework Jest, that make me able to test my functions and mainly the API requests and responses, and to make sure that my code is working fine.
+Here is an example: The nasa API has a object called "status" that checks if the user is not using a wrong parameter or key, if the status is equal 200 everything is working fine, if 403 the request has a problem.
+![image](https://user-images.githubusercontent.com/53789339/133975986-1e17e2a4-830b-4d02-a93b-87ba03f31480.png)
+![image](https://user-images.githubusercontent.com/53789339/133976006-19caee6b-4fcb-4f7d-b54f-3c13b0bb2652.png)
+
+
+
 
 # Conclusion and Learning Outcomes
 I had a lot of learning outcomes in this project, I developed more my skills with ReactJS, I increased my knowledge on how to handle API and how to fetch and API and use this data to render something on the screen, increased my knowledge of modular programming and had the opportunity to do Unit Tests mainly in the API to make sure that everything is working properly and have a more consized code.<br>
