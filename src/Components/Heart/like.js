@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React, {useState} from "react"
 function like(date) {
   let likes = localStorage.getItem('likes');  
   if (!likes) {
@@ -37,9 +37,9 @@ const Heart = ({date, isActive}) => {
     }
   };
   return (       
-    <a onClick={heartActive}>
+    <div onClick={heartActive}>
         {active ? <div className = "heart" id="red-heart"></div> : <div className = "heart"></div>}
-    </a>
+    </div>
   );
 };
 

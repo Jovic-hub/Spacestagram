@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React, { useState } from "react"
 const ReadMore = ({ ok }) => {
     const text = ok;
     const [isReadMore, setIsReadMore] = useState(true);
